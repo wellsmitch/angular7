@@ -2,9 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {Observable} from 'rxjs';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable(
+//   {
+//   providedIn: 'root'// 如果不写需要在app.component.ts 中的providers 声明服务
+// }
+)
 export class HttpRequest {
   httpOptions = {
     headers: new HttpHeaders({

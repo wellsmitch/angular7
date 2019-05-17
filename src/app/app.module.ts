@@ -8,8 +8,9 @@ import { ChildComponent } from './child/child.component';
 import { Child2Component } from './child2/child2.component';
 import { ParentComponent } from './parent/parent.component';
 import { HpComponent } from './httporigin/hp.component';
-import {HttpClientModule} from '@angular/common/http';
 
+import {HttpClientModule} from '@angular/common/http';
+import { HttpRequest } from './service/service.component';
 
 import { Routes, RouterModule } from '@angular/router';
 // https://www.cnblogs.com/starof/p/9012193.html angular 路由守卫
@@ -62,7 +63,7 @@ const routes: Routes = [
     // Angular刷新当前页面的几种方法https://blog.51cto.com/7308310/2335107
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [HttpRequest],
   bootstrap: [AppComponent],
   exports: [RouterModule]
 })

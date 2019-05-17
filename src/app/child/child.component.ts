@@ -8,7 +8,7 @@ import { ParentComponent } from '../parent/parent.component';
 export class ChildComponent implements OnInit {
   private info = '';
   private newName = 'newName';
-  @Output() onNameChanged = new EventEmitter();
+  @Output() NameChanged = new EventEmitter();
   @Input()
   set name(name: string) {
     this.info = name + '改变后的数据';
@@ -21,6 +21,6 @@ export class ChildComponent implements OnInit {
     console.log(this, this.info, 78945); // 'user1'
   }
   emitNewName() {
-    this.onNameChanged.emit(this.newName);
+    this.NameChanged.emit(this.newName);
   }
 }
