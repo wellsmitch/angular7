@@ -10,7 +10,7 @@ import {Observable} from 'rxjs';
 export class HttpRequest {
   httpOptions = {
     headers: new HttpHeaders({
-      'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+      // 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
      // Authorization : 'mu-auth-token',
     })
       // .set('Content-Type', 'formdata')
